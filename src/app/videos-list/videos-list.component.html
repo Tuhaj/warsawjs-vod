@@ -1,2 +1,2 @@
-<div>{{videosList.videos | json}}</div>
+<app-video-item *ngFor="let video of videosList.videos" [video]="video"></app-video-item>
 
