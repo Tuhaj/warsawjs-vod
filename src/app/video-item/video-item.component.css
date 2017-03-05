@@ -1,0 +1,15 @@
+:host {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  border: 1px black solid;
+
+}
+
+title, img {
+  display: block;
+}
+
+span, p {
+  display: inline-block;
+}
