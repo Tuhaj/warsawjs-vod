@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
-
-
-interface Video {
-  title: string;
-  rating: number;
-  image: string;
-  description: string;
-  liked: boolean;
-  source: string;
-}
+import { Video } from './interfaces/videos.interface';
 
 @Injectable()
 
