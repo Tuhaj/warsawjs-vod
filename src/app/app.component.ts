@@ -14,4 +14,9 @@ export class AppComponent {
     this.modalVisible = true;
     this.source = event;
   }
+
+  closeVideo() {
+    this.modalVisible = false;
+    this.source = '';
+  }
 }

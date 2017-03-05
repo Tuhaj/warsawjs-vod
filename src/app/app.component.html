@@ -2,6 +2,7 @@
 
 <app-modal [visible]="modalVisible">
   <video *ngIf="source" #video [src]="source" controls></video>
+  <button (click)="closeVideo()">close</button>
 </app-modal>
 <app-videos-list (watchVideo)="watchVideo($event)"></app-videos-list>
 <app-footer></app-footer>
