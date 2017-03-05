@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
 import { FooterComponent } from './footer/footer.component';
 import {VideosService} from "./services/videos.service";
+import { VideosListComponent } from './videos-list/videos-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LogoComponent,
-    FooterComponent
+    FooterComponent,
+    VideosListComponent
   ],
   imports: [
     BrowserModule,
