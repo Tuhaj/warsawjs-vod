@@ -17,4 +17,8 @@ export class VideoItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickHandler() {
+    console.log('click');
+  }
+
 }
