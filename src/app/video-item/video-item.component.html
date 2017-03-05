@@ -1,6 +1,7 @@
-<title>{{video.title}}</title>
+<header>{{video.title}}</header>
 <p>{{video.rating}} / 5</p>
 <span class="liked">{{video.liked}}</span>
 <img src="{{video.image}}">
 <caption>{{video.description}}</caption>
-<button (click)="onClickHandler($event)">Watch Video</button>
+<button class="watch" (click)="onClickHandler($event)">Watch Video</button>
+<button class="like">Like</button>
