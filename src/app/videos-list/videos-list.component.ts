@@ -14,4 +14,9 @@ export class VideosListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onWatchVideo(hello) {
+    console.log('test', hello);
+  }
+
+
 }

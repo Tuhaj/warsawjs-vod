@@ -1,7 +1,5 @@
-import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Video } from '../interfaces/videos.interface'
-
-@Injectable()
 
 @Component({
   selector: 'app-video-item',
@@ -9,16 +7,16 @@ import { Video } from '../interfaces/videos.interface'
   styleUrls: ['./video-item.component.css']
 })
 export class VideoItemComponent implements OnInit {
-  @Input()
-  video: Video;
+  @Input() video: Video;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClickHandler(event) {
-    console.log('click', event);
-  }
+  @Output() watchVideo = new EventEmitter();
 
+  onClickHandler(event: MouseEvent) {
+    this.watchVideo.emit(this.video.source);
+  }
 }
