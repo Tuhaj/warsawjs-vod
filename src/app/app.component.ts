@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  watchVideo(event) {
+    console.log(event, 'in app component');
+  }
 }

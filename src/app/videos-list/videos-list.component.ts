@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import { VideosService } from '../services/videos.service';
 
 @Component({
@@ -14,8 +14,11 @@ export class VideosListComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Output() watchVideo = new EventEmitter();
+
   onWatchVideo(hello) {
     console.log('test', hello);
+    this.watchVideo.emit(hello);
   }
 
 
