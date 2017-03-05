@@ -6,14 +6,19 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./logo.component.css']
 })
 export class LogoComponent implements OnInit {
-  src: string;
+  src = "http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png";
   @Input()
-  width: 'small' | 'medium' | 'large' = 'large';
+  width: 'small' | 'medium' | 'large' = 'medium';
+  size: number;
+
+  sizes = new Map<string, number>([['thumb', 100],['small', 250], ['medium', 400], ['large', 800]]);
 
   constructor() {
-    this.src = "http://warsawjs.com/assets/images/logo/logo-transparent-240x240.png"
+
   }
+
   ngOnInit() {
+    this.size = this.sizes.get(this.width);
   }
 
 
