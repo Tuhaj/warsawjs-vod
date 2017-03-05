@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <app-modal [visible]="modalVisible">
-  <div>Działałszy</div>
+  <video *ngIf="source" #video [src]="source" controls></video>
 </app-modal>
-<app-videos-list (click)="watchVideo($event)"></app-videos-list>
+<app-videos-list (watchVideo)="watchVideo($event)"></app-videos-list>
 <app-footer></app-footer>

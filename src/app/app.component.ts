@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  modalVisible = true
+  modalVisible = false;
+  source: '';
+
   watchVideo(event) {
     console.log(event, 'in app component');
+    this.modalVisible = true;
+    this.source = event;
   }
 }
