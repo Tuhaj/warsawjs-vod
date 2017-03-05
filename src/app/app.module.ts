@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LogoComponent } from './logo/logo.component';
 import { FooterComponent } from './footer/footer.component';
-import {VideosService} from "./videos.service";
+import {VideosService} from "./services/videos.service";
 
 @NgModule({
   declarations: [
