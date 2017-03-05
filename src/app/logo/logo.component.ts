@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {VideosService} from "../videos.service";
 
 @Component({
   selector: 'app-logo',
@@ -13,8 +14,8 @@ export class LogoComponent implements OnInit {
 
   sizes = new Map<string, number>([['thumb', 100],['small', 250], ['medium', 400], ['large', 800]]);
 
-  constructor() {
-
+  constructor(private videosService: VideosService) {
+    console.log(videosService)
   }
 
   ngOnInit() {
